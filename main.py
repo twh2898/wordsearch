@@ -99,6 +99,9 @@ class Search:
                 if first:
                     self._find_second(r, c, first)
 
+            if len(self._solution) == len(self.words):
+                break
+
         return self._solution
 
 
