@@ -61,6 +61,8 @@ class Search:
             to_remove = list(filter(lambda w: len(w) < i and w[i] == letter, words))
             for word in to_remove:
                 words.remove(word)
+                if len(words) == 0:
+                    self.letter_map[word[0]].pop(word[1])
 
             if len(words) == 0:
                 return
